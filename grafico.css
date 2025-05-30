@@ -1,0 +1,72 @@
+body {
+  background: #0e0e14;
+  color: #fff;
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.bar-chart {
+  width: 90%;
+  max-width: 600px;
+  padding: 20px;
+  background: #1a1a2e;
+  border-radius: 16px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.5);
+  text-align: center;
+}
+
+.bar-chart h1 {
+  margin-bottom: 30px;
+  font-size: 1.5rem;
+  color: #f1f1f1;
+}
+
+.bar {
+  position: relative;
+  height: 40px;
+  margin: 10px 0;
+  background: linear-gradient(to right, #ff6b6b, #f06595);
+  border-radius: 8px;
+  overflow: hidden;
+  --max: 100;
+  width: calc(var(--value) * 1%); /* tamanho da barra baseado no valor */
+  transition: width 0.5s ease-in-out;
+}
+
+.bar .label {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-weight: bold;
+}
+
+.bar .value {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-weight: bold;
+  color: #fff;
+}
+
+.botao {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background 0.3s;
+  z-index: 10;
+}
+
+.botao:hover {
+  background-color: #3e8e41;
+}

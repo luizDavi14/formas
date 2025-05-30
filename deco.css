@@ -1,0 +1,40 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #0f0f1c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.pattern-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 80px);
+  grid-template-rows: repeat(5, 80px);
+  gap: 12px;
+}
+
+.shape {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #ff6ec4, #7873f5);
+  clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+  transition: transform 0.4s ease, filter 0.4s ease;
+  animation: rotatePulse 6s infinite ease-in-out;
+}
+
+.shape:hover {
+  transform: scale(1.2) rotate(10deg);
+  filter: brightness(1.2);
+}
+
+/* Animação sutil */
+@keyframes rotatePulse {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+}
